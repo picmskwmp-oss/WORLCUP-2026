@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>World Cup 2026</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="overlay"></div>
+      <div class="content">
+        <div class="top-badge">⚽ FIFA ARENA - 2026</div>
+        <h1>WORLD CUP<br /><span>2026</span></h1>
+        <p class="subtitle">Mini Games • Score • Hadiah</p>
+        <a href="#login" class="cta-btn">LOGIN SEKARANG</a>
+      </div>
+    </section>
+
+    <section class="login-section" id="login">
+      <div class="login-card">
+        <div class="icon-box">🏆</div>
+        <h2>WORLD CUP 2026</h2>
+        <p>Masukkan Brand & User ID untuk mulai bermain</p>
+
+        <div class="form-group">
+          <label>Brand</label>
+          <div class="input-box">
+            <span>🏷️</span>
+            <input type="text" placeholder="Masukkan brand" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>User ID</label>
+          <div class="input-box">
+            <span>👤</span>
+            <input type="text" placeholder="Masukkan user ID" />
+          </div>
+        </div>
+
+        <button class="login-btn">LOGIN SEKARANG</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+```
+
+---
+
+# 2. style.css
+
+```css
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #050505;
+  color: #fff;
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top, rgba(255, 200, 0, 0.35), transparent 25%),
+    radial-gradient(circle at center, rgba(0, 180, 255, 0.15), transparent 35%),
+    linear-gradient(180deg, #120f1f 0%, #050505 100%);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(255, 230, 120, 0.5), transparent 10%),
+    linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0));
+  pointer-events: none;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at center, rgba(255, 215, 0, 0.08), transparent 30%),
+    linear-gradient(180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.75));
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding-top: 40px;
+}
+
+.top-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size: clamp(44px, 8vw, 100px);
+  line-height: 0.95;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #ffcc2f;
+  text-shadow: 0 0 18px rgba(255, 204, 47, 0.5);
+}
+
+h1 span {
+  color: #25c6ff;
+  text-shadow: 0 0 18px rgba(37, 198, 255, 0.6);
+}
+
+.subtitle {
+  font-size: 14px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 16px 34px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #ffd84d, #ffb800);
+  color: #111;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 2px;
+  box-shadow: 0 10px 30px rgba(255, 184, 0, 0.35);
+}
+
+.login-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background:
+    radial-gradient(circle at top, rgba(255, 174, 0, 0.22), transparent 25%),
+    radial-gradient(circle at center, rgba(120, 0, 255, 0.15), transparent 35%),
+    linear-gradient(135deg, #090015 0%, #12072a 50%, #050505 100%);
+}
+
+.login-card {
+  width: min(100%, 470px);
+  padding: 34px 28px;
+  border-radius: 28px;
+  background: rgba(35, 10, 60, 0.88);
+  border: 1px solid rgba(255, 208, 64, 0.75);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.icon-box {
+  width: 74px;
+  height: 74px;
+  margin: 0 auto 18px;
+  display: grid;
+  place-items: center;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #ffcf24, #ff9f00);
+  color: #111;
+  font-size: 34px;
+}
+
+.login-card h2 {
+  font-size: 34px;
+  margin-bottom: 8px;
+  color: #fff4c2;
+  text-shadow: 0 0 12px rgba(255, 215, 0, 0.35);
+}
+
+.login-card p {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 24px;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.input-box span {
+  opacity: 0.8;
+}
+
+.input-box input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 15px;
+}
+
+.input-box input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.login-btn {
+  width: 100%;
+  margin-top: 12px;
+  padding: 16px 20px;
+  border: 0;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #ffd84d, #ffab00);
+  color: #111;
+  font-weight: 900;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(255, 171, 0, 0.35);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 85vh;
+  }
+
+  .login-card {
+    padding: 28px 20px;
+  }
+
+  .login-card h2 {
+    font-size: 28px;
+  }
+}
+```
+
+---
+
+# 3. script.js
+
+```javascript
+// Belum ada logic game.
+// File ini nanti dipakai untuk minigame penalti bola setelah tampilan selesai.
+```
+
+---
+
+# Catatan
+
+Kalau tampilan luar ini sudah cocok, tahap berikutnya bisa kita buat:
+
+* background stadion yang lebih mirip gambar
+* animasi cahaya
+* panel login yang bisa dipakai
+* setelah itu baru minigame penalti bola
